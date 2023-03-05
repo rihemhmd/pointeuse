@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+    
+        <record id="pointeuse_view_search" model="ir.ui.view">
+            <field name="name">pointeuse.view.search</field>
+            <field name="model">first_test.pointeuse</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="domaine"/>
+                    <field name="année_de_conception"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="pointeuse_view_tree" model="ir.ui.view">
+            <field name="name">pointeuse.view.tree</field>
+            <field name="model">first_test.pointeuse</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="domaine"/>
+                    <field name="année_de_conception"/>
+                </tree>
+            </field>
+        </record>
+    
+        <record id="pointeuse_view_form" model="ir.ui.view">
+            <field name="name">pointeuse.view.form</field>
+            <field name="model">first_test.pointeuse</field>
+            <field name="arch" type="xml">
+                <form string="Information of pointeuse">
+
+                    <header>
+                        <button name="callwiz" type="object" string="Send Presence" class="oe_highlight"/>
+                    </header>
+
+                    <sheet>
+                        <group>
+                            <group string="Information of pointeuse">
+                                <field name="name"/>
+                                <field name="domaine"/>
+                                <field name="année_de_conception"/>
+                            </group>
+                            <notebook>
+                                        <page string="Employee">
+                                            <field name="employee_ids">
+                                                <tree editable="bottom">
+                                                    
+                                                    <field name="employee_id"/>
+                                                    <field name="my_id"/>
+                                                    
+                                                </tree>
+                                                
+  
+                                            </field>       
+                                        </page>
+                            </notebook>
+                        </group>
+                        
+                        
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="pointeuse_action" model="ir.actions.act_window">
+            <field name="name">pointeuse</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">first_test.pointeuse</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+    
+
+</odoo>

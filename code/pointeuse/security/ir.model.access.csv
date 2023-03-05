@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_first_test_pointeuse,pointeuse.first_test_pointeuse,model_first_test_pointeuse,base.group_user,1,1,1,1
+access_first_test_employee,pointeuse.first_test_employee,model_first_test_employee,base.group_user,1,1,1,1
+access_send_presence_wizard,pointeuse.send_presence_wizard,model_send_presence_wizard,base.group_user,1,1,1,1

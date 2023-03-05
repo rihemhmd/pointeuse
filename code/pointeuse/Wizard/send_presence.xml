@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <record id="view_send_presence_form" model="ir.ui.view">
+        <field name="name">send.presence.wizard.form</field>
+        <field name="model">send.presence.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Send Presence">
+                <header>
+
+                </header>
+                <sheet>
+                    <group>
+
+                        <field name="employees_ids" >
+                            <tree>
+                                <field name="employee_id"/>
+                                <field name="my_id"/>
+                            </tree>
+                        </field>
+                        <field name="pointeuse_id"/>
+                        <field name="sennddel"/>
+                        <field name="pointeuseempl_ids" invisible="1"/>
+
+                    </group>
+                    <footer>
+                        <button string="Send" name="action_send" type="object" class="oe_highlight"/>
+                        <button string="Cancel"  class="btn-secondary" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+   
+
+    
+</odoo>
